@@ -1,5 +1,5 @@
 function printMessage(msg){
-	var div = document.createElement('div');
+	const div = document.createElement('div');
 	div.innerHTML = msg;
 	document.getElementById('messages').appendChild(div);
 }
@@ -7,16 +7,16 @@ function printMessage(msg){
 function clearMessages(){
 	document.getElementById('messages').innerHTML = '';
 }
-var computerMove;
+let computerMove;
 computerMove = 'kamień';
 printMessage('Zagrałem ' + computerMove + '! Jeśli Twój ruch to papier, to wygrywasz!');
 
-var playerMove;
+let playerMove;
 playerMove = 'papier';
 printMessage('Zagrałem ' + playerMove+ '! Jeśli Twój ruch to papier, to wygrywasz!');
 
 // cwiczenie pod a
-var computerMove, randomNumber;
+let computerMove, randomNumber;
 randomNumber = Math.floor(Math.random() * 3 + 1);
 console.log('wylosowana liczba to: ' + randomNumber);
 if (randomNumber == '1') {
@@ -27,7 +27,7 @@ if (randomNumber == '1') {
 printMessage('Mój ruch: ' + computerMove);
 
 //cwiczenie pod b
-var computerMove, randomNumber;
+let computerMove, randomNumber;
 randomNumber = Math.floor(Math.random() * 3 + 1);
 console.log('wylosowana liczba to: ' + randomNumber);
 if (randomNumber == '2') {
@@ -37,7 +37,7 @@ printMessage('Mój ruch: ' + computerMove);
 computerMove = 'nieznany ruch';
 
 //cwiczenie pod c
-var computerMove, randomNumber;
+let computerMove, randomNumber;
 randomNumber = Math.floor(Math.random() * 3 + 1);
 console.log('wylosowana liczba to: ' + randomNumber);
 if (randomNumber == '3') {
@@ -58,7 +58,7 @@ if (playerInput == '1') {
 printMessage('Twój ruch: ' + playerMove);
 
 // cwiczenie 2 a papier
-var playerMove, playerInput;
+let playerMove, playerInput;
 playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
 console.log('Wpisana odpowiedź to: ' + playerInput);
 if (playerInput == '2') {
@@ -68,7 +68,7 @@ printMessage('Twój ruch: ' + playerMove);
 playerMove = 'nieznany ruch';
 
 // cwiczeni 2 a noyce
-var playerMove, playerInput;
+let playerMove, playerInput;
 playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
 console.log('Wpisana odpowiedź to: ' + playerInput);
 if (playerInput == '3') {
@@ -77,7 +77,7 @@ if (playerInput == '3') {
 printMessage('Twój ruch: ' + playerMove);
 playerMove = 'nieznany ruch';
 
-var argMoveId, argPlayerMove, argComputerMove, computerMove, playerMove, randomNumber, playerInput;
+let argMoveId, argPlayerMove, argComputerMove, computerMove, playerMove, randomNumber, playerInput;
 
 /**
  * Describe this function...
@@ -115,7 +115,7 @@ console.log('ruch komputera to: ' + computerMove);
 displayResult(playerMove, computerMove);
 
 
-var argMoveId, argPlayerMove, argComputerMove, computerMove, playerMove, randomNumber, playerInput;
+let argMoveId, argPlayerMove, argComputerMove, computerMove, playerMove, randomNumber, playerInput;
 
 /**
  * Describe this function...
@@ -152,7 +152,7 @@ computerMove = getMoveName(randomNumber);
 console.log('ruch komputera to: ' + computerMove);
 displayResult(playerMove, computerMove);
 
-var argMoveId, argPlayerMove, argComputerMove, computerMove, playerMove, randomNumber, playerInput;
+let argMoveId, argPlayerMove, argComputerMove, computerMove, playerMove, randomNumber, playerInput;
 
 /**
  * Describe this function...
@@ -194,7 +194,7 @@ displayResult(playerMove, computerMove);
 
 // tu będą wymienione pozostałe zmienne guzików, np. buttonRock
 
-var buttonRock;
+const buttonRock;
 function buttnoClicked(buttonRock) {
 clearMessages();
 console.log(buttonRock + ' został kliknięty');
@@ -202,7 +202,7 @@ console.log(buttonRock + ' został kliknięty');
 buttonRock = document.getElementById('button-rock');
 buttonRock.addEventListener('click', function(){ buttonClicked('Guzik Kamień'); });
 
-var buttonPaper;
+const buttonPaper;
 function buttnoClicked(buttonPaper) {
 clearMessages();
 console.log(buttonPaper + ' został kliknięty');
@@ -210,7 +210,7 @@ console.log(buttonPaper + ' został kliknięty');
 buttonRock = document.getElementById('button-paper');
 buttonRock.addEventListener('click', function(){ buttonClicked('Guzik Papier'); });
 
-var buttonScissors;
+const buttonScissors;
 function buttnoClicked(buttonScissors) {
 clearMessages();
 console.log(buttonScissors + ' został kliknięty');
